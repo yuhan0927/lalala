@@ -1,0 +1,26 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" bind:change="searchInput" />
+<scroll-view scroll-y class="search-list {{is_hidden?'hidden':''}}">
+    <block wx:for="{{search_list}}" wx:key="{{item.articleId}}">
+      <text class="search-item" bindtap="showItemDetail" data-articledesc="{{item.articledesc}}">{{item.articledesc}}</text>
+    </block>
+</scroll-view>
+<block wx:if="{{articles==''}}">
+  <view class="case">
+    <view class="case-item" wx:for="{{word}}"  wx:key="index"  bindtap="showItemDetail" data-articledesc="{{item}}">
+        <text>{{item}}</text>
+    </view>
+  </view>
+</block>
+<view class="articlePage">
+    <view class="articlesection">
+        <navigator url="../content/content?id={{item.articleId}}&totalId={{totalId}}&typeListId={{item.typeListId}}" class="articlesection-list" hover-class="none" wx:for="{{articles}}" wx:key="item.articleId">
+            <view class="list-Left">
+                <view class="list-Left__title">{{item.articledesc}}</view>
+                <view class="list-Left__num">{{item.num}}</view>
+            </view>
+            <view class="list-Right">
+                <image class="list-ight__img" src="{{item.img}}" />
+            </view> 
+        </navigator> 
+    </view>
+</view>

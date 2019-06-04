@@ -1,0 +1,128 @@
+/**index.wxss**/
+page {
+  height: 100%;
+  background-color: #f8f8f8;
+}
+.contaner{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* 搜索 */
+.search{
+  width: 100%;
+  height: 108rpx;
+}
+.van-search{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.van-search__content{
+  height: 54rpx;
+  align-items: center;
+}
+/* 导航 */
+.weui-grids{
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 18.75rpx;
+}
+.weui-grid{
+  width: 25%;   /*每份占父容器宽度的25%，一排可容纳四个*/
+  text-align: center; 
+  display: inline-block; /*设置为行内块级元素多个元素可在一排显示且设置宽高*/
+}
+.weui-grid__icon{
+  width: 54rpx;
+  height: 46rpx;
+  margin-top: 53rpx;
+  margin-bottom: 21rpx;
+}
+.weui-grid__label{
+  font-size: 22rpx;
+  color: #333333;
+  margin-bottom: 46rpx;
+}
+/* 广告 */
+.banner{
+  width: 100%;
+  height: 150rpx;
+  margin-bottom: 21rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 170rpx;
+}
+/*  */
+.article{
+  width: 100%;
+  padding: 28rpx 37.5rpx 0;
+  margin-bottom:21rpx;
+  background:#fff;
+  /* padding-top: 28rpx; */
+  box-sizing: border-box;
+}
+.article-title{
+  position: relative;
+  width: 100%;
+  height: 73rpx;
+  color: #797979;
+}
+.article-title__text{
+  font-size: 29rpx;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.article-title__time{
+  line-height: 29rpx;
+  font-size: 20rpx;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/*  */
+.article-column{
+  width: 100%;
+  margin-bottom: 53rpx;
+  position: relative;
+}
+.article-column__img{
+  width: 100%;
+  height: 290rpx;
+}
+.article-column__text{
+  position: absolute;
+  font-size: 31rpx;
+  color: #ffffff;
+  left: 21rpx;
+  bottom: 25rpx;
+  padding-right: 21rpx;
+}
+/*  */
+.article-content{
+  width: 100%;
+  display: flex;
+  flex-flow: row  wrap;
+  /* justify-content: space-around; */
+  align-content: flex-start;
+}
+.article-list{
+  width: 33.33%;
+  flex: 0 0 auto;
+  text-align: center;
+  margin-bottom: 65.625rpx;
+}
+.article-list__titlt{
+  color: #000000;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  margin-bottom: 15.625rpx;
+}
+.article-list__des{
+  line-height: 20.79rpx;
+  font-size: 20.79rpx;
+  color: rgba(0,0,0,0.7);
+}

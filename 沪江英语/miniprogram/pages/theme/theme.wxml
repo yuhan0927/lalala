@@ -1,0 +1,15 @@
+<!--miniprogram/pages/theme/theme.wxml-->
+<view class="theme">
+    <view class="theme-subjectType">
+        <image class="theme-subjectType__img" src="/images/d1.jpg"/>
+        <view class="theme-subjectType__text">有声美文阅读</view>
+    </view>
+    <view class="theme-subjectType">
+        <image class="theme-subjectType__img" src="/images/d2.jpg"/>
+        <view class="theme-subjectType__text">口语练习</view>
+    </view>
+    <view class="theme-subjectType">
+        <image class="theme-subjectType__img" src="/images/d2.jpg"/>
+        <view class="theme-subjectType__text">口语练习</view>
+    </view>
+</view>

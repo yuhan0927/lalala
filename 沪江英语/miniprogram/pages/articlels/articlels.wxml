@@ -1,0 +1,14 @@
+<!--miniprogram/pages/articlels/articlels.wxml-->
+<view class="articlePage">
+    <view class="articlesection">
+        <navigator url="../content/content?id={{item.articleId}}&totalId={{totalId}}&typeListId={{typeListId}}" class="articlesection-list" hover-class="none" wx:for="{{articles}}" wx:key="articleId">
+            <view class="list-Left">
+                <view class="list-Left__title">{{item.articledesc}}</view>
+                <view class="list-Left__num">{{item.num}}</view>
+            </view>
+            <view class="list-Right">
+                <image class="list-ight__img" src="{{item.img}}" />
+            </view> 
+        </navigator> 
+    </view>
+</view>

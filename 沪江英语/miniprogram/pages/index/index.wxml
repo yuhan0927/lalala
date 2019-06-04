@@ -1,0 +1,47 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 搜索 -->
+  <view class="search" bindtap="toSearch">
+    <van-search value="{{ value }}" placeholder="搜索" background="#49b849" />
+  </view>
+  <!-- 导航 -->
+  <view class="weui-grids">
+    <block wx:for="{{navigation}}" wx:key="{{item.id}}">
+      <navigator url="" class="weui-grid" hover-class="none" url="../articlels/articlels?id={{item.id}}&navigationText={{item.navigationText}}">
+        <image class="weui-grid__icon" src="{{item.typePic}}" />
+        <view class="weui-grid__label">{{item.typeName}}</view>
+      </navigator>
+    </block>
+  </view>
+  <!-- 广告 -->
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="500">
+    <block wx:for="{{advertPic}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--  -->
+  <scroll-view scroll-y="true">
+    <block wx:for="{{article}}" wx:key="index" wx:for-item="article">
+      <view class="article">
+        <view class="article-title">
+          <view class="article-title__text">{{article.title}}</view>
+          <view class="article-title__time">{{article.time}}</view>
+        </view>
+        <!--  -->
+        <view class="article-column">
+          <image class="article-column__img" src="{{article.imgUrl}}" />
+          <view class="article-column__text">{{article.text}}</view>
+        </view>
+        <!--  -->
+        <view class="article-content">
+          <navigator wx:for="{{article.typeList}}" wx:key="{{typeList.lId}}" wx:for-item="typeList" url="../articlels/articlels?id={{typeList.lId}}&navigationText={{typeList.navigationText}}" class="article-list" hover-class="none">
+            <view class="article-list__titlt">{{typeList.listTitle}}</view>
+            <view class="article-list__des">{{typeList.listdes}}</view>
+          </navigator>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

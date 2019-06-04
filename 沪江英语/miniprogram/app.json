@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index", 
+    "pages/theme/theme", 
+    "pages/articlels/articlels", 
+    "pages/content/content", 
+    "pages/search/search" 
+  ],
+  "window": {
+    "backgroundColor": "#49b849",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#49b849",
+    "navigationBarTitleText": "沪江英语学习",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tb11.png",
+        "selectedIconPath": "/images/tb12.png"
+      },
+      {
+        "pagePath": "pages/theme/theme",
+        "text": "主题",
+        "iconPath": "/images/tb21.png",
+        "selectedIconPath": "/images/tb22.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "cloud": true
+}

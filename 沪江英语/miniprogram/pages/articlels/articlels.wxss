@@ -1,0 +1,47 @@
+/* miniprogram/pages/articlels/articlels.wxss */
+page{
+    width: 100%;
+}
+.articlePage{
+    width: 100%;
+    background-color: #fff;
+}
+.articlesection{
+    padding: 21.857rpx 35.42rpx 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.articlesection-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: 37.5rpx;
+    margin-top:37.5rpx ;
+}
+.list-Left{
+    flex: 1;
+}
+.list-Left__title{
+    width: 398rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 31.25rpx;
+    color: #333333;
+    margin-bottom: 90rpx;
+}
+.list-Left__num{
+    font-size: 23.75rpx;
+    color: #cccccc;
+}
+.list-Right{
+    width: 200rpx;
+    height: 151rpx;
+}
+.list-ight__img{
+    width: 200rpx;
+    height: 151rpx;
+}

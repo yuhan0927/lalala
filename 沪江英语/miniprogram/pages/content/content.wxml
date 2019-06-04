@@ -1,0 +1,26 @@
+<!--miniprogram/pages/content/content.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="content">
+    <scroll-view scroll-y="true"  enable-back-to-top="true" class="artContent">
+        <view class="artContent_header">
+            <text class="artContent_header--title">{{title}}</text>
+            <view class="artContent_header--bottom">
+                <view class="artContent_header--author">{{author}}</view>
+                <view class="artContent_header--time">{{time}}</view>
+            </view>
+        </view>
+        <view class="artContent-body">
+            <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+        </view>
+    </scroll-view>
+    <view class="footer">
+        <view class="footer-follow">
+            <image class="footer-follow__icon" bindtap="backHome" src="../../images/back.png"/>
+            <view class="footer-follow__text">回主页</view>
+        </view>
+        <view class="footer-share" bindtap="nextArticle" data-id='{{id}}'>
+            <image class="footer-share__icon" src="../../images/next.png"/>
+            <view class="footer-share__text">下一篇</view>
+        </view>
+    </view>
+</view>

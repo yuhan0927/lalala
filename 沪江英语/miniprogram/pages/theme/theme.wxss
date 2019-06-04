@@ -1,0 +1,28 @@
+/* miniprogram/pages/theme/theme.wxss */
+page{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 60.4rpx 37.5rpx 0;
+}
+.theme{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between
+}
+.theme-subjectType{
+    width: 317.7rpx;
+    text-align: center;
+    margin-bottom: 54.16rpx;
+}
+.theme-subjectType__img{
+    width: 317.7rpx;
+    height: 235.4rpx;
+    border-radius: 10.4rpx
+}
+.theme-subjectType__text{
+    font-size: 34rpx;
+    line-height: 34rpx;
+    color: #151515;
+}

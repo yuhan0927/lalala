@@ -1,0 +1,86 @@
+<view class="indexPage">
+    <view class="indexPage-header">
+        <image class="indexPage-header__img" mode="scaleToFill"
+            src="http://pics.sc.chinaz.com/files/pic/pic9/201809/bpic8496.jpg"></image>
+        <input class="indexPage-header__search" placeholder="搜索你感兴趣的人" focus="{{focus}}" />
+    </view>
+    <view class="indexPage-body">
+        <view class="body-text">
+            <text>我有6个福利待领取</text>
+            <view class="jiantou"></view>
+        </view>
+        <scroll-view class="body-scroll" scroll-x>
+            <block wx:for="{{swiperOne}}" wx:key="{{item.id}}">
+                <view class="body-scroll__item">
+                    <image class="body-scroll__img" mode="scaleToFill" src="{{item.img}}"></image>
+                    <view class="body-scroll__ct">
+                        <view class="youhui">{{item.text}}</view>
+                        <view class="des">{{item.des}}</view>
+                        <view class="button">
+                            <text>{{item.buttonText}}</text>
+                            <view class="jiantou1"></view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+        <view class="body-kuai">
+            <block wx:for="{{goods}}" wx:key="{{item.id}}">
+                <view class="kuai-block">
+                    <view class="kuai-block__left">
+                        <view class="tit">{{item.text}}</view>
+                        <view class="des">{{item.des}}</view>
+                    </view>
+                    <view class="kuai-block__right">
+                        <image class="aImg" mode="scaleToFill" src="{{item.img}}"></image>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <scroll-view class="titleList" scroll-x>
+            <block wx:for="{{lists}}" wx:key="{{item.id}}">
+                <view class="list {{curIndex === index ? 'listActive' : ''}}" bindtap="toList" data-id="{{item.id}}">{{item.name}}</view>
+            </block>
+        </scroll-view>
+        <view class="oneFlower">
+            <view class="oneFlower-item">一口花</view>
+            <view class="oneFlower-item">全新</view>
+            <view class="oneFlower-item">同城</view>
+        </view>
+        <scroll-view class="block" scroll-x>
+            <block wx:for="{{swiperTwo}}" wx:key="{{item.id}}">
+                <view class="block-item">
+                    <image class="block-item--img" mode="scaleToFill" src="{{item.img}}"></image>
+                    <view class="block-item--text">{{item.text}}</view>
+                </view>
+            </block>
+        </scroll-view>
+        <view class="product">
+                <block wx:for="{{typeList}}" wx:key="{{item.id}}">
+            <view class="product-block">
+                <image class="product-block__top" mode="widthFix"
+                    src="{{item.imgOne}}"></image>
+                <view class="product-block__mid">
+                    <text class="mid-source">{{item.shaixuai}}</text>
+                    <text class="mid-text">{{item.des}}</text>
+                    <view class="mid-foot">
+                        <view class="mid-foot-left">
+                            <image mode="scaleToFill" src="{{item.imgTwo}}"></image>
+                            <text>{{item.numOne}}</text>
+                        </view>
+                        <view class="mid-foot-right">
+                            <text>{{item.numTwo}}</text>
+                            <image mode="scaleToFill" src="{{item.imgThree}}"></image>
+                        </view>
+                    </view>
+                </view>
+                <view class="product-block__foot">
+                    <image mode="scaleToFill" src="{{item.imgFore}}">
+                    </image>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+            </block>
+        </view>
+    </view>
+</view>
